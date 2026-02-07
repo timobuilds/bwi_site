@@ -31,7 +31,7 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
   };
   const textBlockStyle: React.CSSProperties = {
     width: '100%',
-    maxWidth: '204px',
+    maxWidth: '213px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -87,7 +87,7 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
       <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/1c742c81-c34a-4759-83bc-58be6e8cfbfa.svg" alt="Build Wonder Logo" className="bw-logo" style={logoStyle} />
 
       <div className="content-frame" style={textBlockStyle}>
-        <p className="description-text" style={textStyle}>Scientists uncover what is.<br />Engineers create what wasn’t.<br />Storytellers reveal what could be.<br /><br />Build Wonder is a product research & engineering studio that unites these forces—transforming applied science into practical systems that scale.</p>
+        <p className="description-text" style={textStyle}>Scientists uncover what is.<br />Engineers create what wasn’t.<br />Storytellers reveal what could be.<br /><br />Build Wonder is a product engineering practice that helps derisk, package, and position frontier technologies.</p>
       </div>
 
       <div className="partner-logos-row" style={footerLogosStyle}>
