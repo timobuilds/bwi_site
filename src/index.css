@@ -180,6 +180,118 @@ img.broken-image-fallback {
   }
 }
 
+/* Studio Brand Footer staged reveal */
+.studio-brand-footer .bw-logo,
+.studio-brand-footer .description-text .description-line,
+.studio-brand-footer .partner-logos-row .partner-logo-item {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: footerReveal 0.6s ease-out forwards;
+}
+
+.studio-brand-footer .partner-logos-row .partner-logo-glass {
+  animation: footerRevealGlass 0.6s ease-out forwards;
+}
+
+.studio-brand-footer .bw-logo {
+  transform: none;
+  animation: footerFade 0.4s ease-out forwards;
+  animation-delay: 0s;
+}
+
+.studio-brand-footer .description-text .description-line {
+  display: block;
+}
+
+.studio-brand-footer .description-text .description-line.is-spacer {
+  height: 14px;
+}
+
+.studio-brand-footer .description-text .description-line:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.studio-brand-footer .description-text .description-line:nth-child(2) {
+  animation-delay: 0.35s;
+}
+
+.studio-brand-footer .description-text .description-line:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.studio-brand-footer .description-text .description-line:nth-child(4) {
+  animation-delay: 0.65s;
+}
+
+.studio-brand-footer .description-text .description-line:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.studio-brand-footer .partner-logos-row .partner-logo-item:nth-child(1) {
+  animation-delay: 1.1s;
+}
+
+.studio-brand-footer .partner-logos-row .partner-logo-item:nth-child(2) {
+  animation-delay: 1.25s;
+}
+
+.studio-brand-footer .partner-logos-row .partner-logo-item:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.studio-brand-footer .partner-logos-row .partner-logo-item:nth-child(4) {
+  animation-delay: 1.55s;
+}
+
+.studio-brand-footer .partner-logos-row .partner-logo-item:nth-child(5) {
+  animation-delay: 1.7s;
+}
+
+@keyframes footerReveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes footerRevealGlass {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+}
+
+@keyframes footerFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .studio-brand-footer .bw-logo,
+  .studio-brand-footer .description-text .description-line,
+  .studio-brand-footer .partner-logos-row .partner-logo-item {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .studio-brand-footer .partner-logos-row .partner-logo-glass {
+    opacity: 0.6;
+  }
+}
+
 /* Figma Design Tokens */
 /**
  * Design Tokens

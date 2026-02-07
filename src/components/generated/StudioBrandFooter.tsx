@@ -76,8 +76,7 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    filter: 'blur(1px) brightness(1.05) saturate(0.9)',
-    opacity: 0.6
+    filter: 'blur(1px) brightness(1.05) saturate(0.9)'
   };
   const handleLogoClick = (name: string) => {
     console.log(`${name} clicked`);
@@ -87,11 +86,17 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
       <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/1c742c81-c34a-4759-83bc-58be6e8cfbfa.svg" alt="Build Wonder Logo" className="bw-logo" style={logoStyle} />
 
       <div className="content-frame" style={textBlockStyle}>
-        <p className="description-text" style={textStyle}>Scientists uncover what is.<br />Engineers create what wasn’t.<br />Storytellers reveal what could be.<br /><br />Build Wonder is a product engineering practice that helps derisk, package, and position frontier technologies.</p>
+        <p className="description-text" style={textStyle}>
+          <span className="description-line">Scientists uncover what is.</span>
+          <span className="description-line">Engineers create what wasn’t.</span>
+          <span className="description-line">Storytellers reveal what could be.</span>
+          <span className="description-line is-spacer" aria-hidden="true"></span>
+          <span className="description-line">Build Wonder is a product engineering practice that helps derisk, package, and position frontier technologies.</span>
+        </p>
       </div>
 
       <div className="partner-logos-row" style={footerLogosStyle}>
-        <button aria-label="Sparks Logo" style={partnerLogoLinkStyle('sparks')} onMouseEnter={() => setHoveredLogo('sparks')} onMouseLeave={() => setHoveredLogo(null)} onClick={() => handleLogoClick('Sparks')}>
+        <button className="partner-logo-item" aria-label="Sparks Logo" style={partnerLogoLinkStyle('sparks')} onMouseEnter={() => setHoveredLogo('sparks')} onMouseLeave={() => setHoveredLogo(null)} onClick={() => handleLogoClick('Sparks')}>
           <div className="sparks-logo-svg" style={{
           width: '20px',
           height: '20px',
@@ -116,28 +121,28 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
           </div>
         </button>
 
-        <button aria-label="Automagical" style={partnerLogoLinkStyle('automagical')} onMouseEnter={() => setHoveredLogo('automagical')} onMouseLeave={() => setHoveredLogo(null)} onClick={() => handleLogoClick('Automagical')}>
+        <button className="partner-logo-item" aria-label="Automagical" style={partnerLogoLinkStyle('automagical')} onMouseEnter={() => setHoveredLogo('automagical')} onMouseLeave={() => setHoveredLogo(null)} onClick={() => handleLogoClick('Automagical')}>
           <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/5b429df2-c9e1-47bc-883a-25a3b50499dd.svg" alt="Automagical" style={{
           width: '20px',
           height: '20px'
         }} />
         </button>
 
-        <div aria-label="Act Method" style={staticLogoStyle}>
+        <div className="partner-logo-item partner-logo-glass" aria-label="Act Method" style={staticLogoStyle}>
           <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/ebb4a9c1-c0af-4571-9c57-5ad1324ad7aa.svg" alt="Act Method" style={{
           width: '26px',
           height: '20px'
         }} />
         </div>
 
-        <div aria-label="Subtract" style={staticLogoStyle}>
+        <div className="partner-logo-item partner-logo-glass" aria-label="Subtract" style={staticLogoStyle}>
           <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/c0b48ec7-64c8-4ca9-8c6b-a71dcfa217b8.svg" alt="Subtract" style={{
           width: '41.28px',
           height: '14.34px'
         }} />
         </div>
 
-        <div aria-label="Frame Partner" style={staticLogoStyle}>
+        <div className="partner-logo-item partner-logo-glass" aria-label="Frame Partner" style={staticLogoStyle}>
           <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/ec11c43a-bbde-4c17-bb19-3c80b4f32974.svg" alt="Partner Logo" style={{
           width: '23px',
           height: '20px'
