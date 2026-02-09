@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import xLogo from '../../../x-logo.svg';
 interface StudioBrandFooterProps {
   className?: string;
   style?: React.CSSProperties;
@@ -96,7 +97,16 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
       </div>
 
       <div className="partner-logos-row" style={footerLogosStyle}>
-        <button className="partner-logo-item" aria-label="Sparks Logo" style={partnerLogoLinkStyle('sparks')} onMouseEnter={() => setHoveredLogo('sparks')} onMouseLeave={() => setHoveredLogo(null)} onClick={() => handleLogoClick('Sparks')}>
+        <a
+          className="partner-logo-item"
+          href="https://chromewebstore.google.com/detail/sparks/hhjdhihdokahflhfjgpkebfjnkgfljdj"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sparks – Chrome Web Store"
+          style={partnerLogoLinkStyle('sparks')}
+          onMouseEnter={() => setHoveredLogo('sparks')}
+          onMouseLeave={() => setHoveredLogo(null)}
+        >
           <div className="sparks-logo-svg" style={{
           width: '20px',
           height: '20px',
@@ -119,7 +129,7 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
             top: '0.73px'
           }} />
           </div>
-        </button>
+        </a>
 
         <button className="partner-logo-item" aria-label="Automagical" style={partnerLogoLinkStyle('automagical')} onMouseEnter={() => setHoveredLogo('automagical')} onMouseLeave={() => setHoveredLogo(null)} onClick={() => handleLogoClick('Automagical')}>
           <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/5b429df2-c9e1-47bc-883a-25a3b50499dd.svg" alt="Automagical" style={{
@@ -149,5 +159,38 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
         }} />
         </div>
       </div>
+
+      <a
+        className="footer-x-logo"
+        href="https://x.com/timobuilds"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="X (Twitter) @timobuilds"
+        style={{
+          position: 'absolute',
+          bottom: '24px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textDecoration: 'none',
+          transition: 'opacity 0.2s ease',
+        }}
+        onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.7'; }}
+        onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+      >
+        <img
+          src={xLogo}
+          alt=""
+          style={{
+            width: '10px',
+            height: '10px',
+            display: 'block',
+            filter: 'brightness(0)',
+            opacity: 0.28,
+          }}
+        />
+      </a>
     </footer>;
 };
