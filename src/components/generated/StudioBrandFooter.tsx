@@ -79,10 +79,6 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
     justifyContent: 'center',
     filter: 'blur(1px) brightness(1.05) saturate(0.9)'
   };
-  const handleLogoClick = (name: string) => {
-    console.log(`${name} clicked`);
-    // Implementation for navigation would go here
-  };
   return <footer className={`studio-brand-footer ${className || ''}`.trim()} style={containerStyle}>
       <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/1c742c81-c34a-4759-83bc-58be6e8cfbfa.svg" alt="Build Wonder Logo" className="bw-logo" style={logoStyle} />
 
@@ -131,12 +127,21 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
           </div>
         </a>
 
-        <button className="partner-logo-item" aria-label="Automagical" style={partnerLogoLinkStyle('automagical')} onMouseEnter={() => setHoveredLogo('automagical')} onMouseLeave={() => setHoveredLogo(null)} onClick={() => handleLogoClick('Automagical')}>
+        <a
+          className="partner-logo-item"
+          href="https://www.theautomagicalbook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Automagical – The Automagical Book"
+          style={partnerLogoLinkStyle('automagical')}
+          onMouseEnter={() => setHoveredLogo('automagical')}
+          onMouseLeave={() => setHoveredLogo(null)}
+        >
           <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/5b429df2-c9e1-47bc-883a-25a3b50499dd.svg" alt="Automagical" style={{
           width: '20px',
           height: '20px'
         }} />
-        </button>
+        </a>
 
         <div className="partner-logo-item partner-logo-glass" aria-label="Act Method" style={staticLogoStyle}>
           <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/ebb4a9c1-c0af-4571-9c57-5ad1324ad7aa.svg" alt="Act Method" style={{
