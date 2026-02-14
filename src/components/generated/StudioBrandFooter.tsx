@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import xLogo from '../../../x-logo.svg';
+import pensifLogo from '../../../logos/pensif_logo.svg';
 interface StudioBrandFooterProps {
   className?: string;
   style?: React.CSSProperties;
@@ -43,7 +44,6 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
   const textStyle: React.CSSProperties = {
     color: 'rgba(0, 0, 0, 1)',
     fontSize: '12px',
-    fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
     fontWeight: 400,
     lineHeight: '14px',
     letterSpacing: '0px',
@@ -157,12 +157,21 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
         }} />
         </div>
 
-        <div className="partner-logo-item partner-logo-glass" aria-label="Frame Partner" style={staticLogoStyle}>
-          <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/ec11c43a-bbde-4c17-bb19-3c80b4f32974.svg" alt="Partner Logo" style={{
-          width: '23px',
-          height: '20px'
-        }} />
-        </div>
+        <a
+          className="partner-logo-item"
+          href="https://pensif.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pensif"
+          style={partnerLogoLinkStyle('pensif')}
+          onMouseEnter={() => setHoveredLogo('pensif')}
+          onMouseLeave={() => setHoveredLogo(null)}
+        >
+          <img src={pensifLogo} alt="Pensif" style={{
+            width: '20px',
+            height: '20px'
+          }} />
+        </a>
       </div>
 
       <a
