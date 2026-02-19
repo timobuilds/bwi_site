@@ -150,12 +150,21 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
         }} />
         </div>
 
-        <div className="partner-logo-item partner-logo-glass" aria-label="Subtract" style={staticLogoStyle}>
-          <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/c0b48ec7-64c8-4ca9-8c6b-a71dcfa217b8.svg" alt="Subtract" style={{
-          width: '41.28px',
-          height: '14.34px'
-        }} />
-        </div>
+        <a
+          className="partner-logo-item"
+          href="https://www.appliedresearchclub.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Applied Research Club"
+          style={partnerLogoLinkStyle('arc')}
+          onMouseEnter={() => setHoveredLogo('arc')}
+          onMouseLeave={() => setHoveredLogo(null)}
+        >
+          <img src="https://storage.googleapis.com/storage.magicpath.ai/user/282702543900004352/figma-assets/c0b48ec7-64c8-4ca9-8c6b-a71dcfa217b8.svg" alt="Applied Research Club" style={{
+            width: '41.28px',
+            height: '14.34px'
+          }} />
+        </a>
 
         <a
           className="partner-logo-item"
