@@ -88,7 +88,7 @@ export const StudioBrandFooter: React.FC<StudioBrandFooterProps> = ({
           <span className="description-line">Engineers create what wasn’t.</span>
           <span className="description-line">Storytellers reveal what could be.</span>
           <span className="description-line is-spacer" aria-hidden="true"></span>
-          <span className="description-line">Build Wonder is a product engineering practice that helps derisk, package, and position frontier technologies.</span>
+          <span className="description-line">Build Wonder is a product engineering practice that helps de-risk, package, and position frontier technologies.</span>
         </p>
       </div>
 
